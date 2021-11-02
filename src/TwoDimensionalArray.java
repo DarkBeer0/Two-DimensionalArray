@@ -10,11 +10,17 @@ public class TwoDimensionalArray {
         }
         PrintArray(array);
         SwapColumnsAndRows(array);
-        PrintArray(array);
     }
 
-    private static int[][] SwapColumnsAndRows(int[][] array){ //not done
-        return array;
+    private static int[][] SwapColumnsAndRows(int[][] array){ //done
+        int[][] board = new int[array[0].length][array.length];
+        for(int i=0; i<array.length; i++) {
+            for(int j=0; j<array[i].length; j++) {
+                board[j][i] = array[i][j];
+            }
+        }
+        PrintArray(board);
+        return board;
     }
 
     private static void PrintArray(int[][] array){
